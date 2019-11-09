@@ -11,8 +11,6 @@ RUN echo $TZ > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
     apt-get clean
 
-RUN date
-
 COPY ./script /usr/script
 
 RUN chmod 775 /usr/script/build \
